@@ -27,9 +27,9 @@ while (true)
     Console.Clear();
     Console.WriteLine("Sistema de Libros"); 
     Console.WriteLine("---------------------");
-    Console.WriteLine("1.- Listar todas las peliculas");
+    Console.WriteLine("1.- Listar todas los libros");
     Console.WriteLine("2.- Mostrar una pelicula por su nombre");
-    Console.WriteLine("3.- Añadir pelicula");
+    Console.WriteLine("3.- Añadir libro");
     Console.WriteLine("4.- Actualizar pelicula");
     Console.WriteLine("5.- Eliminar pelicula");
     Console.WriteLine("6.- Salir");
