@@ -30,7 +30,7 @@ while (true)
     Console.WriteLine("1.- Listar todas los libros");
     Console.WriteLine("2.- Mostrar una pelicula por su nombre");
     Console.WriteLine("3.- Añadir libro");
-    Console.WriteLine("4.- Actualizar pelicula");
+    Console.WriteLine("4.- Actualizar libro");
     Console.WriteLine("5.- Eliminar pelicula");
     Console.WriteLine("6.- Salir");
     Console.Write("Ingrese la opción que desee ejecutar: ");
