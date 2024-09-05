@@ -28,10 +28,10 @@ while (true)
     Console.WriteLine("Sistema de Libros"); 
     Console.WriteLine("---------------------");
     Console.WriteLine("1.- Listar todas los libros");
-    Console.WriteLine("2.- Mostrar una pelicula por su nombre");
+    Console.WriteLine("2.- Mostrar un libro por su nombre");
     Console.WriteLine("3.- Añadir libro");
     Console.WriteLine("4.- Actualizar libro");
-    Console.WriteLine("5.- Eliminar pelicula");
+    Console.WriteLine("5.- Eliminar libros");
     Console.WriteLine("6.- Salir");
     Console.Write("Ingrese la opción que desee ejecutar: ");
     var optionNotParsed = Console.ReadLine();
@@ -90,14 +90,16 @@ while (true)
 
 static void ListAllBooks(ref BookHub books)
 {
+
     var booksToShow = books.GetAll();
     foreach (var book in booksToShow)
     {
+       
         Console.WriteLine("----------------");
         Console.WriteLine($"Titulo: {book.Title}");
         Console.WriteLine($"Fecha de estreno: {book.ReleaseYear}");
         Console.WriteLine($"Paginas: {book.Duration}");
-        Console.WriteLine($"Generos: {book.Genres.ToList()}");
+        Console.WriteLine($"Generos: {string.Join(", ",book.Genres)}");
         Console.WriteLine($"Idioma: {book.Language}");
         Console.WriteLine($"Sinopsis: {book.Summary}");
         Console.WriteLine($"Calificación: {book.Calification}");
@@ -120,7 +122,7 @@ static void ShowBookByTitle(ref BookHub books)
     Console.WriteLine($"Titulo: {book.Title}");
     Console.WriteLine($"Fecha de estreno: {book.ReleaseYear}");
     Console.WriteLine($"Paginas: {book.Duration}");
-    Console.WriteLine($"Generos: {book.Genres.ToList()}");
+    Console.WriteLine($"Generos: {string.Join(", ", book.Genres)}");
     Console.WriteLine($"Idioma: {book.Language}");
     Console.WriteLine($"Sinopsis: {book.Summary}");
     Console.WriteLine($"Calificación: {book.Calification}");
@@ -182,12 +184,12 @@ static void CreateBook(ref BookHub books)
         string.IsNullOrWhiteSpace(language) || string.IsNullOrWhiteSpace(summary) ||
         calification <= 0)
     {
-        Console.WriteLine("Uno o más parámetros de la película son inválidos.");
+        Console.WriteLine("Uno o más parámetros del libro son inválidos.");
         return;
     }
                 
     books.AddBook(book);
-    Console.WriteLine("\nLibro agregadpo correctamente");
+    Console.WriteLine("\nLibro agregado correctamente");
 }
 
 static void UpdateBook(ref BookHub books)
@@ -250,13 +252,13 @@ static void UpdateBook(ref BookHub books)
         string.IsNullOrWhiteSpace(language) || string.IsNullOrWhiteSpace(summary) ||
         calification <= 0)
     {
-        Console.WriteLine("Uno o más parámetros de la película son inválidos.");
+        Console.WriteLine("Uno o más parámetros de la libro son inválidos.");
         return;
     }
                 
     if (books.UpdateBook(title, book))
     {
-        Console.WriteLine("\nPelicula modificada correctamente");
+        Console.WriteLine("\nLibro modificada correctamente");
         return;
     }
 
