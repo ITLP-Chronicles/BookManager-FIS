@@ -25,7 +25,7 @@ books.AddBook(new Book(
 while (true)
 {
     Console.Clear();
-    Console.WriteLine("Sistema de Peliculas"); 
+    Console.WriteLine("Sistema de Libros"); 
     Console.WriteLine("---------------------");
     Console.WriteLine("1.- Listar todas las peliculas");
     Console.WriteLine("2.- Mostrar una pelicula por su nombre");
