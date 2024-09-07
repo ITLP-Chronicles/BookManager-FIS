@@ -22,4 +22,6 @@ public class Book
         Summary = summary;
         Calification = calification;
     }
+
+    public Book(){}
 }

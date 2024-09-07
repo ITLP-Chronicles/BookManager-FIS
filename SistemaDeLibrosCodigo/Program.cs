@@ -2,25 +2,6 @@
 using SistemaDePeliculasCodigo.Entities;
 
 var books = new BookHub();
-books.AddBook(new Book(
-    "The Dark Knight",
-    2008,
-    152,
-    new List<string>{"Accion", "Suspenso"},
-    "Inglés",
-    "A gripping tale of Batman's relentless pursuit of justice against the anarchic Joker, set in the crime-ridden streets of Gotham City.",
-    9.0f
-));
-
-books.AddBook(new Book(
-    "Inception",
-    2010,
-    148,
-    new List<string> {"Ciencia Ficción"},
-    "Inglés",
-    "A mind-bending journey through dreamscapes as a skilled thief navigates complex subconscious landscapes to plant an idea in a target's mind.",
-    8.8f 
-));
 
 while (true)
 {
