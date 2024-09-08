@@ -70,6 +70,7 @@ public class BookHub
         if (!File.Exists(filePath))
         {
             File.Create(filePath).Close();
+            return;
         }
 
         using (var reader = new StreamReader(filePath))
