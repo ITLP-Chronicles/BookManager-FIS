@@ -54,7 +54,7 @@ while (true)
 
             case 6:
             {
-                Console.Write("Gracias por usar el software");
+                Console.WriteLine("Gracias por usar el software");
                 return;
             }
             
@@ -95,7 +95,7 @@ static void ShowBookByTitle(ref BookHub books)
     var book = books.GetByTitle(name);
     if (book is null)
     {
-        Console.WriteLine($"El ñibro con el nombre {name} no ha sido encontrado");
+        Console.WriteLine($"El libro con el nombre {name} no ha sido encontrado");
         return;
     }
 
@@ -181,7 +181,7 @@ static void UpdateBook(ref BookHub books)
     var existbook = books.GetByTitle(title);
     if (existbook is null)
     {
-        Console.Write($"El libro con el titulo {title} no existe en el sistema");
+        Console.WriteLine($"El libro con el titulo {title} no existe en el sistema");
         return;
     }
     
