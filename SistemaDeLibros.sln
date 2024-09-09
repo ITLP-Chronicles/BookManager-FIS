@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeLibrosCodigo", "SistemaDeLibrosCodigo\SistemaDeLibrosCodigo.csproj", "{7EBF0EB1-5D60-45DC-9351-225AB3D0BB0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDePeliculasTesting", "SistemaDePeliculasTesting\SistemaDePeliculasTesting.csproj", "{DAFDA7C0-A5AD-459B-9EAA-4BBF25AA22B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeLibrosTesting", "SistemaDeLibrosTesting\SistemaDeLibrosTesting.csproj", "{DAFDA7C0-A5AD-459B-9EAA-4BBF25AA22B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -78,7 +78,7 @@ static void ListAllBooks(ref BookHub books)
        
         Console.WriteLine("----------------");
         Console.WriteLine($"Titulo: {book.Title}");
-        Console.WriteLine($"Fecha de estreno: {book.ReleaseYear}");
+        Console.WriteLine($"Fecha de publicación: {book.ReleaseYear}");
         Console.WriteLine($"Paginas: {book.Duration}");
         Console.WriteLine($"Generos: {string.Join(", ",book.Genres)}");
         Console.WriteLine($"Idioma: {book.Language}");
@@ -101,7 +101,7 @@ static void ShowBookByTitle(ref BookHub books)
 
     Console.WriteLine("----------------");
     Console.WriteLine($"Titulo: {book.Title}");
-    Console.WriteLine($"Fecha de estreno: {book.ReleaseYear}");
+    Console.WriteLine($"Fecha de publicación: {book.ReleaseYear}");
     Console.WriteLine($"Paginas: {book.Duration}");
     Console.WriteLine($"Generos: {string.Join(", ", book.Genres)}");
     Console.WriteLine($"Idioma: {book.Language}");
@@ -120,7 +120,7 @@ static void CreateBook(ref BookHub books)
         Console.Write($"El libro con el titulo {title} ya existe en el sistema");
         return;
     }
-    Console.Write("Ingrese el año de estreno: ");
+    Console.Write("Ingrese el año de publicación: ");
     if (!int.TryParse(Console.ReadLine(), out int year))
     {
         Console.WriteLine("Ingrese un año valido");
@@ -185,7 +185,7 @@ static void UpdateBook(ref BookHub books)
         return;
     }
     
-    Console.Write("Ingrese el nuevo año de estreno: ");
+    Console.Write("Ingrese el nuevo año de publicación: ");
     if (!int.TryParse(Console.ReadLine(), out int year))
     {
         Console.WriteLine("Ingrese un año valido");
@@ -203,13 +203,17 @@ static void UpdateBook(ref BookHub books)
         Console.WriteLine("Ingrese una cantidad de paginas valida");
         return;
     }
+    
     Console.Write("Ingrese los nuevos generos: ");
     var genresString = Console.ReadLine();
     List<string> genres = genresString.Split(", ").ToList();
+    
     Console.Write("Ingrese el nuevo idioma: ");
     var language = Console.ReadLine();
+    
     Console.Write("Ingrese la nueva sinopsis: ");
     var summary = Console.ReadLine();
+    
     Console.Write("Ingrese la nueva calificación: ");
     if (!int.TryParse(Console.ReadLine(), out int calification))
     {
@@ -221,10 +225,7 @@ static void UpdateBook(ref BookHub books)
         Console.WriteLine("Ingrese una calificación valida");
         return;
     }
-    Console.Write("Ingrese los nuevos actores separados por una coma (ej: Andrew Garfield, Tom holland): ");
-    var actorsString = Console.ReadLine();
-    var actors = actorsString.Split(',').ToList();
-
+    
     var book = new Book(title, year, pages,
         genres, language, summary, calification);
                 
